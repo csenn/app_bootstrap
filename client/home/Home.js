@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { addItem } from './data/actions'
 import './home.css'
 
-class Home extends React.Component {
+export class Home extends React.Component {
   constructor (props) {
     super(props)
     this.state = { value: '' }
@@ -19,7 +19,7 @@ class Home extends React.Component {
   }
   render () {
     const items = this.props.$$items.map($$item => {
-      return <div>{$$item}</div>
+      return <div className='list-item'>{$$item}</div>
     })
 
     return (
