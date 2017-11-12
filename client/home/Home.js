@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addItem } from './data/actions'
+import './home.css'
 
 class Home extends React.Component {
   constructor (props) {
@@ -24,7 +25,7 @@ class Home extends React.Component {
     return (
       <div>
         <input type='text' value={this.state.value} onChange={this.handleChange} />
-        <button onClick={this.handleClick}>
+        <button className='pink-btn' onClick={this.handleClick}>
           Add To List
         </button>
         <div>
